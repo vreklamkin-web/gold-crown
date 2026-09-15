@@ -19,18 +19,50 @@
   --line: #e2e6e4; /* цвет разделителей, границ, рамок */
 
   /* --- Типографика ---
-     Фирменный шрифт будет добавлен позже в src/assets/fonts/.
-     Как только шрифт появится, здесь нужно будет прописать @font-face
-     и заменить fallback-стек на "<ИмяШрифта>", ... */
-  --font-base: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+     Фирменный шрифт — ALS Agrofont (см. @font-face ниже), с фолбэком
+     на системные шрифты, если он не загрузился. */
+  --font-base: "ALS Agrofont", -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
-/* Заглушка для будущего @font-face фирменного шрифта:
+/* Фирменный шрифт ALS Agrofont, файлы лежат в src/assets/fonts/.
+   Имя семейства и начертания подтверждены по метаданным файлов (fc-scan). */
 @font-face {
-  font-family: "НазваниеШрифта";
-  src: url("/assets/fonts/....woff2") format("woff2");
+  font-family: "ALS Agrofont";
+  src: url("/assets/fonts/ALSAgrofont-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
-*/
+
+@font-face {
+  font-family: "ALS Agrofont";
+  src: url("/assets/fonts/ALSAgrofont-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ALS Agrofont";
+  src: url("/assets/fonts/ALSAgrofont-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ALS Agrofont";
+  src: url("/assets/fonts/ALSAgrofont-BoldExpanded.woff2") format("woff2");
+  font-weight: 700;
+  font-stretch: expanded;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ALS Agrofont";
+  src: url("/assets/fonts/ALSAgrofont-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
