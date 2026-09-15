@@ -1,6 +1,7 @@
 {#
-  Секция hero — тёмный блок сразу под header'ом: заголовок, лид,
-  две кнопки действия, стат-плашки и мок экрана приложения.
+  Секция hero — светлый блок сразу под header'ом: заголовок, лид,
+  две кнопки действия, стат-плашки и мок экрана приложения (мокап
+  телефона намеренно тёмный — имитирует реальный экран приложения).
   Подключается языковыми страницами (uz.njk / ru.njk / en.njk) через
   {% include "partials/hero.njk" %}; переводы берёт из глобальных
   данных uz/ru/en (src/_data) по текущему lang.
@@ -9,11 +10,11 @@
 {% set t = uz if lang == "uz" else (ru if lang == "ru" else en) %}
 
 <section class="hero">
-  {{ ornament(position="top-right", variant="on-dark") }}
+  {{ ornament(position="top-right", variant="on-light") }}
 
   <div class="wrap hero__grid">
     <div>
-      <span class="eyebrow eyebrow--dark">{{ t.hero.eyebrow }}</span>
+      <span class="eyebrow eyebrow--soft">{{ t.hero.eyebrow }}</span>
       <h1><span>{{ t.hero.h1Line1 }}</span><span class="accent">{{ t.hero.h1Line2 }}</span></h1>
 
       <p class="hero__lead">{{ t.hero.lead }}</p>
