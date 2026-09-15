@@ -1,1 +1,33 @@
-{}
+{
+  "header": {
+    "logoAlt": "Agrobank — home page",
+    "navLabel": "Main menu",
+    "navQanday": "How it works",
+    "navFarq": "Before / After",
+    "navKarta": "Open a card",
+    "navSavollar": "FAQ",
+    "langLabel": "Site language",
+    "cta": "Download the app"
+  },
+  "hero": {
+    "eyebrow": "Zolotaya Korona · online pickup",
+    "h1Line1": "Don't wait.",
+    "h1Line2": "Don't make them wait.",
+    "lead": "Your Zolotaya Korona transfer lands straight on your card. In 1 minute. Any time. No branch visit.",
+    "ctaPrimary": "Download the app",
+    "ctaSecondary": "No card — open one",
+    "fact1": "In 1 minute",
+    "fact2": "Day and night",
+    "fact3": "No fees",
+    "phoneCaption": "Agrobank Mobile app screen: a $300 Zolotaya Korona transfer has arrived, with an “Accept” button shown.",
+    "phoneTime": "9:41",
+    "phoneNetwork": "4G",
+    "phoneApp": "Agrobank Mobile",
+    "txTag": "ZOLOTAYA KORONA",
+    "txSum": "300.00 USD",
+    "txFrom": "Sender: Jasurbek R.",
+    "txCard": "Visa •••• 4417",
+    "txBtn": "Accept",
+    "phoneHint": "Amount and rate are shown before you tap"
+  }
+}

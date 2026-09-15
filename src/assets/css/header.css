@@ -1,0 +1,201 @@
+/*
+  Header лендинга: логотип, навигация, переключатель языка, кнопка CTA.
+  Плюс стили .btn — кнопка используется и в header, и в hero (и будет
+  переиспользоваться в других секциях), поэтому её стили держим здесь,
+  а не дублируем.
+*/
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--font-base);
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+h1 {
+  margin: 0;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+}
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* --- Кнопки (.btn) --------------------------------------------------- */
+/* ПРАВКА 1: полностью скруглённая (pill) форма вместо промежуточного
+   радиуса; иконка-стрелка выровнена по центру с текстом через flex. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--tap);
+  padding: 14px 26px;
+  border: 2px solid transparent;
+  border-radius: var(--r-pill);
+  font: inherit;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.18s ease, border-color 0.18s ease,
+    color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+.btn--primary {
+  background: var(--green);
+  color: var(--ink);
+  box-shadow: 0 10px 26px rgba(0, 205, 105, 0.28);
+}
+.btn--primary:hover {
+  background: var(--green-600);
+  transform: translateY(-2px);
+}
+.btn--ghost {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.34);
+}
+.btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+.btn--sm {
+  min-height: 44px;
+  padding: 11px 18px;
+  font-size: 15px;
+}
+
+.icon-arrow {
+  width: 17px;
+  height: 17px;
+  flex: none;
+}
+
+/* --- Header ------------------------------------------------------------ */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.header__in {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 70px;
+}
+.logo {
+  display: block;
+  flex: none;
+}
+.logo .lg {
+  width: 150px;
+  height: auto;
+}
+.nav {
+  display: none;
+  margin-left: auto;
+  gap: 26px;
+}
+/* ПРАВКА 2: жирнее (700) и чуть крупнее (16px), но без переусердства —
+   это меню из 4 пунктов посадочной страницы, а не сайта банка целиком. */
+.nav a {
+  color: var(--body);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+}
+.nav a:hover {
+  color: var(--green-600);
+}
+.header__side {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+.nav + .header__side {
+  margin-left: 0;
+}
+.lang {
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: var(--r-s);
+}
+.lang__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  min-height: 34px;
+  padding: 0 8px;
+  background: transparent;
+  border: 0;
+  border-radius: 9px;
+  color: var(--muted);
+  text-decoration: none;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.lang__btn[aria-pressed="true"] {
+  background: var(--green);
+  color: var(--ink);
+}
+.header .btn {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .nav {
+    display: flex;
+  }
+  .header .btn {
+    display: inline-flex;
+  }
+}

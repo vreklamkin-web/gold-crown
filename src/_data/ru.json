@@ -1,1 +1,33 @@
-{}
+{
+  "header": {
+    "logoAlt": "Agrobank — главная страница",
+    "navLabel": "Основное меню",
+    "navQanday": "Как это работает",
+    "navFarq": "До / После",
+    "navKarta": "Открыть карту",
+    "navSavollar": "Вопросы",
+    "langLabel": "Язык сайта",
+    "cta": "Скачать приложение"
+  },
+  "hero": {
+    "eyebrow": "Zolotaya Korona · приём онлайн",
+    "h1Line1": "Не ждите.",
+    "h1Line2": "Не заставляйте ждать.",
+    "lead": "Ваш перевод Zolotaya Korona — сразу на карте. За 1 минуту. В любое время. Без отделения.",
+    "ctaPrimary": "Скачать приложение",
+    "ctaSecondary": "Нет карты — открыть",
+    "fact1": "За 1 минуту",
+    "fact2": "Круглосуточно",
+    "fact3": "Без комиссии",
+    "phoneCaption": "Экран приложения Agrobank Mobile: поступил перевод Zolotaya Korona на 300 долларов, показана кнопка «Принять».",
+    "phoneTime": "9:41",
+    "phoneNetwork": "4G",
+    "phoneApp": "Agrobank Mobile",
+    "txTag": "ZOLOTAYA KORONA",
+    "txSum": "300.00 USD",
+    "txFrom": "Отправитель: Жасурбек Р.",
+    "txCard": "Visa •••• 4417",
+    "txBtn": "Принять",
+    "phoneHint": "Сумма и курс видны до нажатия кнопки"
+  }
+}

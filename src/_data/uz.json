@@ -1,1 +1,33 @@
-{}
+{
+  "header": {
+    "logoAlt": "Agrobank — bosh sahifa",
+    "navLabel": "Asosiy menyu",
+    "navQanday": "Qanday ishlaydi",
+    "navFarq": "Avval / Endi",
+    "navKarta": "Karta ochish",
+    "navSavollar": "Savollar",
+    "langLabel": "Sayt tili",
+    "cta": "Ilovani yuklab olish"
+  },
+  "hero": {
+    "eyebrow": "Zolotaya Korona · onlayn qabul qilish",
+    "h1Line1": "Kutmang.",
+    "h1Line2": "Kuttirmang.",
+    "lead": "Zolotaya Korona pulingiz to‘g‘ridan-to‘g‘ri kartangizda. 1 daqiqada. Istalgan vaqtda. Filialsiz.",
+    "ctaPrimary": "Ilovani yuklab olish",
+    "ctaSecondary": "Kartam yo‘q — ochish",
+    "fact1": "1 daqiqada",
+    "fact2": "Kechayu kunduz",
+    "fact3": "Komissiyasiz",
+    "phoneCaption": "Agrobank Mobile ilovasi ekrani: Zolotaya Koronadan 300 dollar kelgan, «Qabul qilish» tugmasi ko‘rsatilgan.",
+    "phoneTime": "9:41",
+    "phoneNetwork": "4G",
+    "phoneApp": "Agrobank Mobile",
+    "txTag": "ZOLOTAYA KORONA",
+    "txSum": "300.00 USD",
+    "txFrom": "Jo‘natuvchi: Jasurbek R.",
+    "txCard": "Visa •••• 4417",
+    "txBtn": "Qabul qilish",
+    "phoneHint": "Summa va kurs tugmadan oldin ko‘rinadi"
+  }
+}

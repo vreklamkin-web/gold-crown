@@ -1,22 +1,53 @@
 <!--
   Базовый HTML-каркас лендинга.
   Подключается языковыми страницами (uz.njk / ru.njk / en.njk) через
-  front matter "layout: layout.njk". Содержимое страницы попадает сюда
-  через переменную content (стандартный механизм layout'ов в Eleventy).
-  Пока каркас содержит только doctype/head/meta и подключение css/js —
-  верстка секций (hero, шаги, форма и т.д.) будет добавлена на следующих шагах.
+  front matter "layout: layout.njk". Содержимое страницы (секции hero,
+  шаги, форма и т.д.) попадает сюда через переменную content —
+  стандартный механизм layout'ов в Eleventy.
+  Здесь же — общий для всех языков header с логотипом, навигацией и
+  переключателем языка (ссылки на реальные /, /ru/, /en/ страницы,
+  без JS-переключения).
 -->
+{% set t = uz if lang == "uz" else (ru if lang == "ru" else en) %}
 <!doctype html>
 <html lang="{{ lang }}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{ title }}</title>
-    <!-- Дизайн-токены (цвета, шрифты) -->
+    <!-- Дизайн-токены (цвета, шрифты, форма/размеры) -->
     <link rel="stylesheet" href="/assets/css/tokens.css" />
+    <link rel="stylesheet" href="/assets/css/header.css" />
+    <link rel="stylesheet" href="/assets/css/hero.css" />
   </head>
   <body>
-    {{ content | safe }}
+    <header class="header">
+      <div class="wrap header__in">
+        <a class="logo" href="/" aria-label="{{ t.header.logoAlt }}">
+          <img class="lg" src="/assets/logo/logo.png" alt="Agrobank" />
+        </a>
+
+        <nav class="nav" aria-label="{{ t.header.navLabel }}">
+          <a href="#qanday">{{ t.header.navQanday }}</a>
+          <a href="#farq">{{ t.header.navFarq }}</a>
+          <a href="#karta">{{ t.header.navKarta }}</a>
+          <a href="#savollar">{{ t.header.navSavollar }}</a>
+        </nav>
+
+        <div class="header__side">
+          <div class="lang" role="group" aria-label="{{ t.header.langLabel }}">
+            <a class="lang__btn" href="/" aria-pressed="{{ 'true' if lang == 'uz' else 'false' }}">UZ</a>
+            <a class="lang__btn" href="/ru/" aria-pressed="{{ 'true' if lang == 'ru' else 'false' }}">RU</a>
+            <a class="lang__btn" href="/en/" aria-pressed="{{ 'true' if lang == 'en' else 'false' }}">EN</a>
+          </div>
+          <a class="btn btn--primary btn--sm" href="#yuklab-olish">{{ t.header.cta }}{% include "partials/icon-arrow.njk" %}</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      {{ content | safe }}
+    </main>
 
     <!-- Основной JS-файл лендинга (пока заглушка) -->
     <script src="/assets/js/main.js" defer></script>

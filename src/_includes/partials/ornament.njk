@@ -1,0 +1,31 @@
+{#
+  Переиспользуемый декоративный орнамент — ромбы по диагональной
+  композиции (национальный геометрический мотив, перекликается с
+  формой логотипа). Только в зелёной палитре проекта.
+
+  Подключение как макрос (параметры передаются явно, а не через
+  глобальный контекст):
+    {% from "partials/ornament.njk" import ornament %}
+    {{ ornament(position="top-right", variant="on-dark") }}
+
+  Параметры:
+    position — угол секции: "top-right" (по умолчанию) | "bottom-right"
+    variant  — цветовое сочетание:
+               "on-dark"  (по умолчанию) — --green/--green-600 на тёмном фоне (hero и т.п.)
+               "on-green" — --ink полупрозрачный поверх заливки --green (card-cta и т.п.)
+
+  Стили (.ornament, .ornament--*) живут в hero.css как единственном
+  месте использования на этом шаге; при подключении в следующей
+  цветной секции (card-cta, sender) стоит вынести их в общий файл
+  (например ornament.css), чтобы не дублировать между секциями.
+#}
+{% macro ornament(position="top-right", variant="on-dark") %}
+<svg class="ornament ornament--{{ position }} ornament--{{ variant }}" viewBox="0 0 320 320" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+  <rect width="88" height="88" transform="translate(184 -44) rotate(45)"/>
+  <rect width="88" height="88" transform="translate(232 4) rotate(45)"/>
+  <rect width="88" height="88" transform="translate(136 4) rotate(45)"/>
+  <rect width="88" height="88" transform="translate(184 52) rotate(45)"/>
+  <rect width="88" height="88" transform="translate(280 52) rotate(45)"/>
+  <rect width="88" height="88" transform="translate(232 100) rotate(45)"/>
+</svg>
+{% endmacro %}

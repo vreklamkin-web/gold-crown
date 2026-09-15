@@ -1,0 +1,52 @@
+{#
+  Секция hero — тёмный блок сразу под header'ом: заголовок, лид,
+  две кнопки действия, стат-плашки и мок экрана приложения.
+  Подключается языковыми страницами (uz.njk / ru.njk / en.njk) через
+  {% include "partials/hero.njk" %}; переводы берёт из глобальных
+  данных uz/ru/en (src/_data) по текущему lang.
+#}
+{% from "partials/ornament.njk" import ornament %}
+{% set t = uz if lang == "uz" else (ru if lang == "ru" else en) %}
+
+<section class="hero">
+  {{ ornament(position="top-right", variant="on-dark") }}
+
+  <div class="wrap hero__grid">
+    <div>
+      <span class="eyebrow eyebrow--dark">{{ t.hero.eyebrow }}</span>
+      <h1><span>{{ t.hero.h1Line1 }}</span><span class="accent">{{ t.hero.h1Line2 }}</span></h1>
+
+      <p class="hero__lead">{{ t.hero.lead }}</p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#yuklab-olish">{{ t.hero.ctaPrimary }}{% include "partials/icon-arrow.njk" %}</a>
+        <a class="btn btn--ghost" href="#karta">{{ t.hero.ctaSecondary }}{% include "partials/icon-arrow.njk" %}</a>
+      </div>
+
+      <ul class="facts">
+        <li class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>{{ t.hero.fact1 }}</li>
+        <li class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3a9 9 0 1 1-8.5 6"/><path d="M3 4v5h5"/></svg>{{ t.hero.fact2 }}</li>
+        <li class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 5 5 19"/><circle cx="7.5" cy="7.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg>{{ t.hero.fact3 }}</li>
+      </ul>
+    </div>
+
+    <figure class="phone" style="margin-block:0;">
+      <figcaption class="sr-only">{{ t.hero.phoneCaption }}</figcaption>
+      <div aria-hidden="true">
+        <div class="phone__bar"><span>{{ t.hero.phoneTime }}</span><span>{{ t.hero.phoneNetwork }}</span></div>
+        <div class="phone__app"><span class="dot"></span>{{ t.hero.phoneApp }}</div>
+        <div class="tx">
+          <span class="tx__tag">{{ t.hero.txTag }}</span>
+          <div class="tx__sum">{{ t.hero.txSum }}</div>
+          <div class="tx__from">{{ t.hero.txFrom }}</div>
+          <div class="tx__card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:17px;height:17px;flex:none;"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M2.5 10h19"/></svg>
+            <span>{{ t.hero.txCard }}</span>
+          </div>
+          <div class="tx__btn">{{ t.hero.txBtn }}</div>
+        </div>
+        <p class="phone__hint">{{ t.hero.phoneHint }}</p>
+      </div>
+    </figure>
+  </div>
+</section>
