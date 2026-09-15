@@ -46,5 +46,50 @@
       "top": "Yuqoriga"
     },
     "legal": "«Agrobank» ATB · Toshkent shahri, Botir Zokirov ko'chasi, 2A · O'zbekiston Respublikasi Markaziy banki litsenziyasi № — . Sahifadagi ma'lumot ommaviy taklif emas."
+  },
+  "steps": {
+    "eyebrow": "Uch qadam",
+    "title": "Uch qadam — va pul kartangizda",
+    "lead": "Telefoningizni oling. Boshqa hech narsa kerak emas.",
+    "items": [
+      {
+        "title": "Agrobank Mobile ilovasini oching",
+        "text": "Parolingiz yoki barmoq izingiz bilan kiring.",
+        "miniActive": "Kirish",
+        "miniInactive": "Asosiy sahifa"
+      },
+      {
+        "title": "«O'tkazish» → «Zolotaya Korona»",
+        "text": "Bo'limni tanlang. Pul sizni kutib turgan bo'ladi.",
+        "miniInactive": "O'tkazish",
+        "miniActive": "Zolotaya Korona"
+      },
+      {
+        "title": "Summani tekshiring va qabul qiling",
+        "text": "Hammasi to'g'ri bo'lsa — «Qabul qilish». Pul kartangizda.",
+        "miniInactive": "300.00 USD",
+        "miniCta": "Qabul qilish"
+      }
+    ]
+  },
+  "compare": {
+    "eyebrow": "Farqi",
+    "title": "Avval qanday edi, endi qanday",
+    "oldLabel": "Avval",
+    "newLabel": "Endi",
+    "old": [
+      "Filialga borish kerak edi",
+      "Navbatda turardingiz",
+      "Pasport so'rardilar",
+      "Faqat 9:00 dan 18:00 gacha",
+      "Naqd pulni o'zingiz ko'tarib yurardingiz"
+    ],
+    "new": [
+      "Uydan turib olasiz",
+      "Navbat yo'q",
+      "Hujjat olib yurish shart emas",
+      "Kechasi ham, dam olish kunida ham",
+      "Pul to'g'ridan-to'g'ri kartangizda"
+    ]
   }
 }

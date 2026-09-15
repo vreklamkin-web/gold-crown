@@ -1,0 +1,29 @@
+{#
+  Секция «Uch qadam» (id="qanday") — 3 карточки шага с номером,
+  заголовком, текстом и мини-мокапом экрана (тёмный блок с 1-2 строками
+  состояния + опциональной CTA-строкой в последнем шаге).
+  Подключается языковыми страницами через {% include "partials/steps.njk" %}.
+#}
+{% from "partials/section-head.njk" import sectionHead %}
+{% set t = uz if lang == "uz" else (ru if lang == "ru" else en) %}
+
+<section class="section" id="qanday">
+  <div class="wrap">
+    {{ sectionHead(t.steps.eyebrow, t.steps.title, t.steps.lead) }}
+
+    <ol class="steps">
+      {% for item in t.steps.items %}
+      <li class="step-card">
+        <div class="step-card__num" aria-hidden="true">{{ loop.index }}</div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+        <div class="step-card__mock" aria-hidden="true">
+          {% if item.miniInactive %}<div class="step-card__row">{{ item.miniInactive }}</div>{% endif %}
+          {% if item.miniActive %}<div class="step-card__row step-card__row--active">{% include "partials/icon-check.njk" %}{{ item.miniActive }}</div>{% endif %}
+          {% if item.miniCta %}<div class="step-card__cta">{{ item.miniCta }}</div>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+{#
+  Секция «Avval / Endi» (id="farq") — два столбца: было (крестики,
+  нейтральный фон) / стало (галочки, светло-зелёный фон).
+  Подключается языковыми страницами через {% include "partials/compare.njk" %}.
+#}
+{% from "partials/section-head.njk" import sectionHead %}
+{% set t = uz if lang == "uz" else (ru if lang == "ru" else en) %}
+
+<section class="section section--soft" id="farq">
+  <div class="wrap">
+    {{ sectionHead(t.compare.eyebrow, t.compare.title) }}
+
+    <div class="compare">
+      <div class="compare__col compare__col--old">
+        <h3 class="compare__label">{{ t.compare.oldLabel }}</h3>
+        <ul>
+          {% for line in t.compare.old %}
+          <li>{% include "partials/icon-cross.njk" %}{{ line }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="compare__col compare__col--new">
+        <h3 class="compare__label">{{ t.compare.newLabel }}</h3>
+        <ul>
+          {% for line in t.compare.new %}
+          <li>{% include "partials/icon-check.njk" %}{{ line }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

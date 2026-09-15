@@ -1,0 +1,19 @@
+{#
+  Переиспользуемая шапка секции: пилюля-лейбл (eyebrow) + h2 + необязательный
+  лид-абзац. Используется в "Uch qadam" и "Avval / Endi", понадобится ещё
+  в FAQ и форме.
+
+  Подключение как макрос:
+    {% from "partials/section-head.njk" import sectionHead %}
+    {{ sectionHead(t.steps.eyebrow, t.steps.title, t.steps.lead) }}
+
+  Параметр lead необязателен (по умолчанию пусто — абзац не рендерится,
+  как в "Avval / Endi", где лида нет).
+#}
+{% macro sectionHead(eyebrow, title, lead="") %}
+<div class="section-head">
+  <span class="eyebrow eyebrow--soft">{{ eyebrow }}</span>
+  <h2>{{ title }}</h2>
+  {% if lead %}<p>{{ lead }}</p>{% endif %}
+</div>
+{% endmacro %}

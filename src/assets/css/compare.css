@@ -1,0 +1,76 @@
+/*
+  Секция «Avval / Endi»: два столбца сравнения — нейтральный (было) и
+  светло-зелёный с рамкой --green (стало).
+*/
+
+.compare {
+  display: grid;
+  gap: 18px;
+}
+.compare__col {
+  border-radius: var(--r-l);
+  padding: 28px 24px;
+}
+.compare__col--old {
+  background: #fff;
+  border: 1px solid var(--line);
+}
+.compare__col--new {
+  background: var(--green-50);
+  border: 2px solid var(--green);
+}
+.compare__label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.compare__col--old .compare__label {
+  color: var(--muted);
+}
+.compare__col--new .compare__label {
+  color: var(--green-600);
+}
+
+.compare__col ul {
+  display: grid;
+}
+.compare__col li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 11px 0;
+  font-size: 16px;
+}
+.compare__col li + li {
+  border-top: 1px solid var(--line-2);
+}
+.compare__col--old li {
+  color: var(--muted);
+}
+.compare__col--new li {
+  color: var(--ink);
+  font-weight: 600;
+}
+.compare__col svg {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  margin-top: 2px;
+}
+.compare__col--old .icon-cross {
+  /* line-2 как разделитель слишком светлый для иконки — берём --muted,
+     он уже есть в палитре и достаточно контрастен на белом фоне */
+  color: var(--muted);
+}
+.compare__col--new .icon-check {
+  color: var(--green-600);
+}
+
+@media (min-width: 960px) {
+  .compare {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}

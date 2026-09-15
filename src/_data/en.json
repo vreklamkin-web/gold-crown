@@ -46,5 +46,50 @@
       "top": "Back to top"
     },
     "legal": "Agrobank JSCB · 2A Botir Zokirov St., Tashkent, Uzbekistan · Licensed by the Central Bank of the Republic of Uzbekistan No. — . Information on this page is not a public offer."
+  },
+  "steps": {
+    "eyebrow": "Three steps",
+    "title": "Three steps — and the money is on your card",
+    "lead": "Grab your phone. Nothing else is needed.",
+    "items": [
+      {
+        "title": "Open Agrobank Mobile",
+        "text": "Log in with your password or fingerprint.",
+        "miniActive": "Log in",
+        "miniInactive": "Home screen"
+      },
+      {
+        "title": "\"Transfer\" → \"Zolotaya Korona\"",
+        "text": "Pick the section. The money is already waiting.",
+        "miniInactive": "Transfer",
+        "miniActive": "Zolotaya Korona"
+      },
+      {
+        "title": "Check the amount and accept",
+        "text": "Everything correct — tap \"Accept\". Money's on your card.",
+        "miniInactive": "300.00 USD",
+        "miniCta": "Accept"
+      }
+    ]
+  },
+  "compare": {
+    "eyebrow": "The difference",
+    "title": "How it used to be, and how it is now",
+    "oldLabel": "Before",
+    "newLabel": "Now",
+    "old": [
+      "Had to go to a branch",
+      "Stood in line",
+      "Asked for your passport",
+      "Only 9:00 to 18:00",
+      "Had to carry cash yourself"
+    ],
+    "new": [
+      "Get it from home",
+      "No queue",
+      "No need to carry documents",
+      "Nights and weekends too",
+      "Money goes straight to your card"
+    ]
   }
 }
