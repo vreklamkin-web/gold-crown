@@ -1,0 +1,42 @@
+/*
+  Заготовка под видео кампании: рамка 16:9, тёмный фон, play-кнопка
+  без embed (см. partials/video.njk).
+*/
+
+.video {
+  max-width: 900px;
+  margin-inline: auto;
+}
+.video__frame {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  background: var(--dark);
+  border-radius: var(--r-l);
+  overflow: hidden;
+}
+.video__play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 78px;
+  height: 78px;
+  margin: auto;
+  border-radius: var(--r-pill);
+  background: var(--green);
+  color: var(--ink);
+  box-shadow: 0 12px 34px rgba(0, 205, 105, 0.34);
+}
+.video__play svg {
+  width: 30px;
+  height: 30px;
+  margin-left: 4px;
+}
+.video__caption {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 15px;
+  color: var(--muted);
+}

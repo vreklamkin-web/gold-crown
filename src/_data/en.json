@@ -128,5 +128,37 @@
       {"q": "When does the money arrive?", "a": "As soon as the sender sends the transfer, it appears in the app. If you accept it, the money is on your card within 1 minute — even at night or on a day off."},
       {"q": "Can I still collect it at a branch?", "a": "Yes, the old way still works: bring your passport to a branch and get cash. With the app, you don't need to go anywhere — the choice is yours."}
     ]
+  },
+  "trust": {
+    "items": [
+      {"num": "1", "label": "minute to your card"},
+      {"num": "24/7", "label": "nights and holidays too"},
+      {"num": "0", "label": "fees"},
+      {"num": "0", "label": "queues or paperwork"}
+    ]
+  },
+  "video": {
+    "playLabel": "Watch the video",
+    "caption": "\"Don't wait. Don't keep them waiting.\" — the Zolotaya Korona video"
+  },
+  "needs": {
+    "eyebrow": "Requirements",
+    "title": "What you'll need",
+    "lead": "Just three things. Nothing else.",
+    "items": [
+      {"title": "An Agrobank Visa card", "text": "A sum or foreign-currency card both work.", "linkText": "No card yet? Click here", "linkHref": "#karta"},
+      {"title": "The Agrobank Mobile app", "text": "Free on the App Store and Google Play.", "linkText": "No app yet? Download it", "linkHref": "#yuklab-olish"},
+      {"title": "Internet", "text": "Mobile data is enough — Wi-Fi isn't required.", "linkText": "Go to FAQ", "linkHref": "#savollar"}
+    ]
+  },
+  "sender": {
+    "eyebrow": "For those living abroad",
+    "title": "Living abroad? Don't keep your loved ones waiting.",
+    "text": "Send the money to an Agrobank card. Your mother won't need to visit a branch, stand in line, or carry documents. The money will be on her phone the minute you send it.",
+    "slogan": "Don't wait. Send it to a card.",
+    "shareTelegram": "Telegram",
+    "shareWhatsapp": "WhatsApp",
+    "copyLabel": "Copy link",
+    "copiedLabel": "Link copied"
   }
 }

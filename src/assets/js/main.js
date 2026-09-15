@@ -1,7 +1,7 @@
 // Основной JS-файл лендинга.
-// Два независимых блока: маска+валидация формы заявки на карту, и
-// аккордеон FAQ. Оба работают полностью на клиенте, без обращения
-// к серверу.
+// Независимые блоки: маска+валидация формы заявки на карту, аккордеон
+// FAQ, копирование ссылки в блоке "Jo'natuvchiga". Все работают
+// полностью на клиенте, без обращения к серверу.
 (function () {
   "use strict";
 
@@ -97,4 +97,26 @@
       if (panel) panel.classList.toggle("is-open", !isOpen);
     });
   });
+
+  /* --- Копирование ссылки (секция "Jo'natuvchiga") -----------------------
+     Единственная реально рабочая из трёх кнопок шеринга: копирует текущий
+     URL страницы в буфер обмена и на 2 секунды меняет текст кнопки на
+     copiedLabel. Подписи берём из data-атрибутов, которые задал шаблон
+     (там уже нужный перевод для текущего языка), чтобы не дублировать
+     переводы в JS. */
+  var copyBtn = document.getElementById("shareCopy");
+  var copyLabelEl = document.getElementById("copyLabel");
+
+  if (copyBtn && copyLabelEl && navigator.clipboard) {
+    copyBtn.addEventListener("click", function () {
+      navigator.clipboard.writeText(window.location.href).then(function () {
+        var copiedText = copyLabelEl.getAttribute("data-copied-label");
+        var originalText = copyLabelEl.getAttribute("data-label");
+        copyLabelEl.textContent = copiedText;
+        setTimeout(function () {
+          copyLabelEl.textContent = originalText;
+        }, 2000);
+      });
+    });
+  }
 })();

@@ -1,0 +1,16 @@
+{#
+  Узкая полоса доверия сразу под hero — единственное место, где фон
+  полностью залит --green (не белый и не тёмный). 4 коротких факта.
+#}
+{% set t = uz if lang == "uz" else (ru if lang == "ru" else en) %}
+
+<div class="trust">
+  <div class="wrap trust__grid">
+    {% for item in t.trust.items %}
+    <div class="trust__item">
+      <b>{{ item.num }}</b>
+      <span>{{ item.label }}</span>
+    </div>
+    {% endfor %}
+  </div>
+</div>

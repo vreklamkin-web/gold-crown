@@ -1,0 +1,68 @@
+/*
+  Секция «Sizga nima kerak»: 3 карточки-требования.
+*/
+
+.needs {
+  display: grid;
+  gap: 16px;
+}
+.need {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r-l);
+  padding: 24px;
+}
+.need__ico {
+  width: 48px;
+  height: 48px;
+  flex: none;
+  border-radius: var(--r-s);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--green-50);
+  color: var(--green-600);
+}
+.need__ico svg {
+  width: 23px;
+  height: 23px;
+}
+.need h3 {
+  font-size: 17.5px;
+}
+.need p {
+  margin-top: 6px;
+  font-size: 15px;
+  color: var(--muted);
+}
+.need a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--green-600);
+  text-decoration: none;
+}
+.need a:hover {
+  text-decoration: underline;
+}
+.need a .icon-arrow {
+  width: 16px;
+  height: 16px;
+  flex: none;
+}
+
+@media (min-width: 960px) {
+  .needs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .needs .need {
+    flex-direction: column;
+    gap: 16px;
+  }
+}

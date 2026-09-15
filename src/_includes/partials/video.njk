@@ -1,0 +1,22 @@
+{#
+  Заготовка под видео кампании — реального ролика пока нет (как и
+  реальных фото — договорённость с самого начала проекта). Рамка 16:9,
+  тёмный фон, центральная play-кнопка БЕЗ обработчика клика и БЕЗ
+  какого-либо embed.
+#}
+{% set t = uz if lang == "uz" else (ru if lang == "ru" else en) %}
+
+<section class="section">
+  <div class="wrap">
+    <div class="video">
+      <!-- TODO: video-embed появится когда будет готов ролик кампании -->
+      <div class="video__frame" data-video-id="">
+        <span class="video__play">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.4v13.2L19 12 8 5.4Z"/></svg>
+          <span class="sr-only">{{ t.video.playLabel }}</span>
+        </span>
+      </div>
+      <p class="video__caption">{{ t.video.caption }}</p>
+    </div>
+  </div>
+</section>

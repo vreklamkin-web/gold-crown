@@ -1,0 +1,39 @@
+/*
+  Полоса доверия под hero — единственное место с полностью зелёным
+  фоном (не белым и не тёмным). Отдельный файл — держим один CSS на
+  партиал, как и остальные секции проекта (hero.css/steps.css/...),
+  чтобы структура файлов оставалась предсказуемой.
+*/
+
+.trust {
+  background: var(--green);
+  color: var(--ink);
+}
+.trust__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px 18px;
+  padding-block: 22px;
+}
+.trust__item {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  padding: 8px 0;
+}
+.trust__item b {
+  font-size: 24px;
+  letter-spacing: -0.02em;
+}
+.trust__item span {
+  font-size: 14px;
+  font-weight: 600;
+  /* тёмный неитральный поверх зелёного, приглушённый — не новый цвет */
+  opacity: 0.72;
+}
+
+@media (min-width: 640px) {
+  .trust__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,35 @@
+{#
+  Секция «Jo'natuvchiga» — для тех, кто за границей. В референсе была
+  синим (#3C4BDC) — единственное место вне палитры проекта, перекрашена
+  в тёмный (--dark, тот же фон, что у hero — чтобы секции выглядели
+  родственно) с зелёными акцентами, синего нет.
+  Кнопка "скопировать ссылку" — единственная реально рабочая из трёх
+  (копирует текущий URL через navigator.clipboard, см. main.js).
+  Telegram/WhatsApp — ссылки-заглушки (TODO ниже), иконки — не логотипы
+  брендов, а icon-arrow.njk (переиспользуемая, нейтральная).
+#}
+{% from "partials/ornament.njk" import ornament %}
+{% set t = uz if lang == "uz" else (ru if lang == "ru" else en) %}
+
+<section class="section">
+  <div class="wrap">
+    <div class="sender">
+      {{ ornament(position="bottom-right", variant="on-dark") }}
+
+      <span class="eyebrow eyebrow--dark">{{ t.sender.eyebrow }}</span>
+      <h2>{{ t.sender.title }}</h2>
+      <p class="sender__text">{{ t.sender.text }}</p>
+      <span class="sender__slogan">{{ t.sender.slogan }}</span>
+
+      <div class="share">
+        <!-- TODO: реальные share-ссылки Telegram/WhatsApp на URL кампании — когда будет известен финальный домен -->
+        <a class="share__btn" href="#" target="_blank" rel="noopener">{{ t.sender.shareTelegram }}{% include "partials/icon-arrow.njk" %}</a>
+        <a class="share__btn" href="#" target="_blank" rel="noopener">{{ t.sender.shareWhatsapp }}{% include "partials/icon-arrow.njk" %}</a>
+        <button class="share__btn" type="button" id="shareCopy">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10 13.5a4 4 0 0 0 5.7 0l2.8-2.8a4 4 0 0 0-5.7-5.7l-1.3 1.3"/><path d="M14 10.5a4 4 0 0 0-5.7 0l-2.8 2.8a4 4 0 0 0 5.7 5.7l1.3-1.3"/></svg>
+          <span id="copyLabel" data-label="{{ t.sender.copyLabel }}" data-copied-label="{{ t.sender.copiedLabel }}">{{ t.sender.copyLabel }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

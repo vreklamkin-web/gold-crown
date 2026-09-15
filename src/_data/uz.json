@@ -128,5 +128,37 @@
       {"q": "Pul qachon keladi?", "a": "Jo'natuvchi pulni yuborishi bilan u ilovada ko'rinadi. Qabul qilsangiz — 1 daqiqada kartangizda. Kechasi ham, dam olish kunida ham."},
       {"q": "Filialda ham olsam bo'ladimi?", "a": "Ha, eski usul ishlayveradi: pasport bilan filialga borib naqd olasiz. Ilova orqali esa borish shart emas — tanlov sizda."}
     ]
+  },
+  "trust": {
+    "items": [
+      {"num": "1", "label": "daqiqada kartada"},
+      {"num": "24/7", "label": "kechasi ham, bayramda ham"},
+      {"num": "0", "label": "komissiya"},
+      {"num": "0", "label": "navbat va hujjat"}
+    ]
+  },
+  "video": {
+    "playLabel": "Rolikni ko'rish",
+    "caption": "«Kutmang. Kuttirmang.» — Zolotaya Korona roliki"
+  },
+  "needs": {
+    "eyebrow": "Shartlar",
+    "title": "Sizga nima kerak",
+    "lead": "Uchta shart. Boshqa hech narsa yo'q.",
+    "items": [
+      {"title": "Agrobank Visa kartasi", "text": "So'm yoki valyuta kartasi — ikkalasi ham bo'ladi.", "linkText": "Kartangiz yo'qmi? Bu yerni bosing", "linkHref": "#karta"},
+      {"title": "Agrobank Mobile ilovasi", "text": "App Store va Google Play'da bepul.", "linkText": "Ilova yo'qmi? Yuklab oling", "linkHref": "#yuklab-olish"},
+      {"title": "Internet", "text": "Uyali internet ham yetarli — Wi-Fi shart emas.", "linkText": "Savollarga o'tish", "linkHref": "#savollar"}
+    ]
+  },
+  "sender": {
+    "eyebrow": "Chet elda yashovchilar uchun",
+    "title": "Chet eldamisiz? Yaqinlaringizni kuttirmang.",
+    "text": "Pulni Agrobank kartasiga yuboring. Onangiz filialga bormaydi, navbatda turmaydi, hujjat ko'tarib yurmaydi. Pul telefonida — siz yuborgan daqiqada.",
+    "slogan": "Kuttirmang. Kartaga yuboring.",
+    "shareTelegram": "Telegram",
+    "shareWhatsapp": "WhatsApp",
+    "copyLabel": "Havoladan nusxa olish",
+    "copiedLabel": "Havola nusxalandi"
   }
 }

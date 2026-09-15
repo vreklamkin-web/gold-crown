@@ -1,0 +1,39 @@
+{#
+  Секция «Sizga nima kerak» — 3 карточки-требования (карта, приложение,
+  интернет), каждая со ссылкой-стрелкой на нужный раздел.
+#}
+{% from "partials/section-head.njk" import sectionHead %}
+{% set t = uz if lang == "uz" else (ru if lang == "ru" else en) %}
+
+<section class="section section--soft">
+  <div class="wrap">
+    {{ sectionHead(t.needs.eyebrow, t.needs.title, t.needs.lead) }}
+
+    <ul class="needs">
+      <li class="need">
+        <div class="need__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M2.5 10h19"/></svg></div>
+        <div>
+          <h3>{{ t.needs.items[0].title }}</h3>
+          <p>{{ t.needs.items[0].text }}</p>
+          <a href="{{ t.needs.items[0].linkHref }}">{{ t.needs.items[0].linkText }}{% include "partials/icon-arrow.njk" %}</a>
+        </div>
+      </li>
+      <li class="need">
+        <div class="need__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M11 18.5h2"/></svg></div>
+        <div>
+          <h3>{{ t.needs.items[1].title }}</h3>
+          <p>{{ t.needs.items[1].text }}</p>
+          <a href="{{ t.needs.items[1].linkHref }}">{{ t.needs.items[1].linkText }}{% include "partials/icon-arrow.njk" %}</a>
+        </div>
+      </li>
+      <li class="need">
+        <div class="need__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4.5 9a12 12 0 0 1 15 0"/><path d="M7.5 12.5a8 8 0 0 1 9 0"/><path d="M10.5 16a4 4 0 0 1 3 0"/><circle cx="12" cy="19" r="1"/></svg></div>
+        <div>
+          <h3>{{ t.needs.items[2].title }}</h3>
+          <p>{{ t.needs.items[2].text }}</p>
+          <a href="{{ t.needs.items[2].linkHref }}">{{ t.needs.items[2].linkText }}{% include "partials/icon-arrow.njk" %}</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>

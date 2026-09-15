@@ -1,0 +1,77 @@
+/*
+  Секция «Jo'natuvchiga»: тёмный блок (--dark, как у hero — родственный
+  вид), --r-xl скругление, зелёные акценты, орнамент в углу.
+*/
+
+.sender {
+  position: relative;
+  overflow: hidden;
+  background: var(--dark);
+  color: #fff;
+  border-radius: var(--r-xl);
+  padding: 40px 24px;
+}
+.sender h2 {
+  margin-top: 0;
+  font-size: clamp(26px, 5.6vw, 38px);
+  max-width: 20ch;
+}
+.sender__text {
+  position: relative;
+  margin-top: 16px;
+  max-width: 46ch;
+  color: var(--on-dark);
+}
+.sender__slogan {
+  position: relative;
+  display: inline-block;
+  margin-top: 24px;
+  padding: 11px 18px;
+  border-radius: var(--r-s);
+  background: rgba(0, 205, 105, 0.16);
+  border: 1px solid rgba(0, 205, 105, 0.4);
+  color: var(--green);
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.share {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+.share__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 50px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: var(--r-s);
+  color: #fff;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.18s ease;
+}
+.share__btn:hover {
+  background: var(--green-600);
+  border-color: var(--green-600);
+}
+.share__btn svg,
+.share__btn .icon-arrow {
+  width: 19px;
+  height: 19px;
+  flex: none;
+}
+
+@media (min-width: 960px) {
+  .sender {
+    padding: 64px 56px;
+  }
+}
