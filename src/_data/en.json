@@ -29,5 +29,22 @@
     "txCard": "Visa •••• 4417",
     "txBtn": "Accept",
     "phoneHint": "Amount and rate are shown before you tap"
+  },
+  "footer": {
+    "tagline": "Receive international transfers online, with no queues.",
+    "slogan": "Don't wait. Don't keep them waiting.",
+    "callCenterLabel": "Call center",
+    "callCenterPhone": "+998 71 203-88-88",
+    "callCenterHours": "Available 24/7",
+    "appLabel": "App",
+    "cardApplyLink": "Apply for a card",
+    "pagesLabel": "Pages",
+    "nav": {
+      "how": "How it works",
+      "compare": "Before / After",
+      "faq": "FAQ",
+      "top": "Back to top"
+    },
+    "legal": "Agrobank JSCB · 2A Botir Zokirov St., Tashkent, Uzbekistan · Licensed by the Central Bank of the Republic of Uzbekistan No. — . Information on this page is not a public offer."
   }
 }

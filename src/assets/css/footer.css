@@ -1,0 +1,161 @@
+/*
+  Футер: светлый минималистичный блок (по мотивам реального agrobank.uz),
+  4 колонки на десктопе → столбик на мобиле, иконки соцсетей, legal-текст.
+  Переиспользует токены из tokens.css — новых размеров/радиусов не вводит.
+*/
+
+.footer {
+  background: var(--soft);
+  border-top: 1px solid var(--line);
+  padding-block: 44px 28px;
+}
+
+.footer__grid {
+  display: grid;
+  gap: 32px;
+}
+
+.footer__col h3 {
+  margin: 0 0 12px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.footer__logo {
+  width: 140px;
+  height: auto;
+}
+.footer__tagline {
+  margin-top: 14px;
+  max-width: 32ch;
+  font-size: 15px;
+  color: var(--body);
+}
+.footer__slogan {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--green-600);
+}
+
+.footer__tel {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-decoration: none;
+}
+.footer__tel:hover {
+  color: var(--green-600);
+}
+.footer__hint {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* --- Бейджи App Store / Google Play: тёмные пилюли, белая иконка+текст --- */
+.stores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.store {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  background: var(--ink);
+  border-radius: var(--r-s);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.store:hover {
+  background: var(--green-600);
+}
+.store svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+.footer__link-strong {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--green-600);
+  text-decoration: none;
+}
+.footer__link-strong:hover {
+  text-decoration: underline;
+}
+
+.footer__nav {
+  display: grid;
+  gap: 10px;
+}
+.footer__nav a {
+  color: var(--body);
+  font-size: 15px;
+  text-decoration: none;
+}
+.footer__nav a:hover {
+  color: var(--green-600);
+}
+
+/* --- Иконки соцсетей: простые круглые, обводкой --- */
+.footer__social {
+  display: flex;
+  gap: 10px;
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+.social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  color: var(--body);
+}
+.social:hover {
+  color: var(--green-600);
+  border-color: var(--green-600);
+}
+.social svg {
+  width: 18px;
+  height: 18px;
+}
+
+.footer__legal {
+  margin-top: 24px;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+@media (min-width: 640px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 960px) {
+  .footer {
+    padding-block: 64px 36px;
+  }
+  .footer__grid {
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    gap: 40px;
+  }
+}

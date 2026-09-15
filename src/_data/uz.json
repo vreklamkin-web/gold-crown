@@ -29,5 +29,22 @@
     "txCard": "Visa •••• 4417",
     "txBtn": "Qabul qilish",
     "phoneHint": "Summa va kurs tugmadan oldin ko‘rinadi"
+  },
+  "footer": {
+    "tagline": "Xalqaro pul o'tkazmalarini navbatsiz, onlayn qabul qiling.",
+    "slogan": "Kutmang. Kuttirmang.",
+    "callCenterLabel": "Call-markaz",
+    "callCenterPhone": "+998 71 203-88-88",
+    "callCenterHours": "Kechayu kunduz ishlaydi",
+    "appLabel": "Ilova",
+    "cardApplyLink": "Karta ochishga ariza",
+    "pagesLabel": "Sahifalar",
+    "nav": {
+      "how": "Qanday ishlaydi",
+      "compare": "Avval / Endi",
+      "faq": "Savollar",
+      "top": "Yuqoriga"
+    },
+    "legal": "«Agrobank» ATB · Toshkent shahri, Botir Zokirov ko'chasi, 2A · O'zbekiston Respublikasi Markaziy banki litsenziyasi № — . Sahifadagi ma'lumot ommaviy taklif emas."
   }
 }

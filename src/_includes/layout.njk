@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/assets/css/tokens.css" />
     <link rel="stylesheet" href="/assets/css/header.css" />
     <link rel="stylesheet" href="/assets/css/hero.css" />
+    <link rel="stylesheet" href="/assets/css/footer.css" />
   </head>
   <body>
     <header class="header">
@@ -48,6 +49,10 @@
     <main id="top">
       {{ content | safe }}
     </main>
+
+    <footer class="footer">
+      {% include "partials/footer.njk" %}
+    </footer>
 
     <!-- Основной JS-файл лендинга (пока заглушка) -->
     <script src="/assets/js/main.js" defer></script>
