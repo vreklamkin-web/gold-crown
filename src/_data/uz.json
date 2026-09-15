@@ -91,5 +91,42 @@
       "Kechasi ham, dam olish kunida ham",
       "Pul to'g'ridan-to'g'ri kartangizda"
     ]
+  },
+  "card": {
+    "eyebrow": "Karta ochish",
+    "title": "Kartangiz yo'qmi? Ariza qoldiring — biz o'zimiz bog'lanamiz",
+    "lead": "Filialga borish shart emas. Ismingiz va telefoningizni yozing, qolganini biz qilamiz.",
+    "points": ["Kartani ochish bepul", "Qo'ng'iroq 1 ish kuni ichida", "Kartani manzilingizga yetkazib beramiz"],
+    "form": {
+      "nameLabel": "Ismingiz",
+      "namePlaceholder": "Masalan: Nodira",
+      "nameError": "Ismingizni yozing.",
+      "phoneLabel": "Telefon raqamingiz",
+      "phoneError": "Raqamni to'liq yozing: +998 va 9 ta raqam.",
+      "regionLabel": "Viloyat",
+      "regionPlaceholder": "Tanlang",
+      "regionError": "Viloyatni tanlang.",
+      "districtLabel": "Tuman",
+      "districtPlaceholder": "Masalan: Qo'rg'ontepa",
+      "districtError": "Tumanni yozing.",
+      "submit": "Ariza yuborish",
+      "note": "Ma'lumotlaringiz faqat karta rasmiylashtirish uchun ishlatiladi.",
+      "successTitle": "Arizangiz qabul qilindi",
+      "successText": "1 ish kuni ichida shu raqamga qo'ng'iroq qilamiz va kartani rasmiylashtiramiz.",
+      "regions": ["Andijon", "Buxoro", "Farg'ona", "Jizzax", "Namangan", "Navoiy", "Qashqadaryo", "Qoraqalpog'iston Respublikasi", "Samarqand", "Sirdaryo", "Surxondaryo", "Toshkent viloyati", "Toshkent shahri", "Xorazm"]
+    }
+  },
+  "faq": {
+    "eyebrow": "Savol-javob",
+    "title": "Ko'p so'raladigan savollar",
+    "items": [
+      {"q": "Kartam yo'q, nima qilay?", "a": "Yuqoridagi formani to'ldiring — biz o'zimiz qo'ng'iroq qilamiz. Kartani ochish bepul."},
+      {"q": "Menga naqd pul kerak. Kartadan nima foyda?", "a": "Kartadagi puldan bankomatda naqd yechib olasiz yoki do'konda to'g'ridan-to'g'ri to'laysiz. Farqi shunda: pul allaqachon sizda — filial navbatini kutmaysiz."},
+      {"q": "Kurs qanday? Naqd olganimdan farqi bormi?", "a": "Summa va kurs «Qabul qilish» tugmasidan oldin ekranda ko'rinadi. Ko'rasiz, keyin qaror qilasiz — rozi bo'lmasangiz qabul qilmaysiz."},
+      {"q": "Bu xavfsizmi?", "a": "Pul bank ilovasi orqali o'z kartangizga tushadi. Ilovaga faqat siz kirasiz — parol va SMS-kod bilan. SMS-kodni hech kimga aytmang, bank ham so'ramaydi."},
+      {"q": "Komissiya bormi?", "a": "O'tkazmani ilovada qabul qilganingiz uchun sizdan komissiya olinmaydi. O'tkazma haqini jo'natuvchi to'laydi."},
+      {"q": "Pul qachon keladi?", "a": "Jo'natuvchi pulni yuborishi bilan u ilovada ko'rinadi. Qabul qilsangiz — 1 daqiqada kartangizda. Kechasi ham, dam olish kunida ham."},
+      {"q": "Filialda ham olsam bo'ladimi?", "a": "Ha, eski usul ishlayveradi: pasport bilan filialga borib naqd olasiz. Ilova orqali esa borish shart emas — tanlov sizda."}
+    ]
   }
 }

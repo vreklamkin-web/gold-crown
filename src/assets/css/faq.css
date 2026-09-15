@@ -1,0 +1,57 @@
+/*
+  Секция FAQ: аккордеон вопрос-ответ. Панель открывается/закрывается
+  через класс .is-open, который переключает main.js вместе с
+  aria-expanded на кнопке.
+*/
+
+.faq {
+  max-width: 820px;
+  border-top: 1px solid var(--line);
+}
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
+.faq-item h3 {
+  margin: 0;
+}
+.faq-item__q {
+  width: 100%;
+  min-height: var(--tap);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 0;
+  background: none;
+  border: 0;
+  color: var(--ink);
+  font: inherit;
+  font-size: 17.5px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+.faq-item__q:hover {
+  color: var(--green-600);
+}
+.faq-item__q .icon-cross {
+  width: 22px;
+  height: 22px;
+  flex: none;
+  color: var(--green-600);
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+.faq-item__q[aria-expanded="true"] .icon-cross {
+  transform: rotate(0deg);
+}
+
+.faq-item__a {
+  display: none;
+  padding: 0 0 24px;
+  max-width: 64ch;
+  color: var(--muted);
+}
+.faq-item__a.is-open {
+  display: block;
+}

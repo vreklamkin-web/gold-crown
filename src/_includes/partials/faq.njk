@@ -1,0 +1,29 @@
+{#
+  Секция FAQ (id="savollar") — аккордеон вопрос-ответ.
+  Раскрытие/закрытие панелей — в src/assets/js/main.js (несколько
+  панелей могут быть открыты одновременно, см. обоснование в аудите).
+#}
+{% from "partials/section-head.njk" import sectionHead %}
+{% set t = uz if lang == "uz" else (ru if lang == "ru" else en) %}
+
+<section class="section" id="savollar">
+  <div class="wrap">
+    {{ sectionHead(t.faq.eyebrow, t.faq.title) }}
+
+    <div class="faq">
+      {% for item in t.faq.items %}
+      <div class="faq-item">
+        <h3>
+          <button class="faq-item__q" type="button" aria-expanded="false" aria-controls="faq-a{{ loop.index }}" id="faq-q{{ loop.index }}">
+            <span>{{ item.q }}</span>
+            {% include "partials/icon-cross.njk" %}
+          </button>
+        </h3>
+        <div class="faq-item__a" id="faq-a{{ loop.index }}" role="region" aria-labelledby="faq-q{{ loop.index }}">
+          <p>{{ item.a }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

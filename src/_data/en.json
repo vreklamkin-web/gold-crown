@@ -91,5 +91,42 @@
       "Nights and weekends too",
       "Money goes straight to your card"
     ]
+  },
+  "card": {
+    "eyebrow": "Open a card",
+    "title": "No card yet? Leave a request — we'll call you",
+    "lead": "No need to visit a branch. Just leave your name and phone number — we'll handle the rest.",
+    "points": ["Opening a card is free", "We'll call within 1 business day", "We deliver the card to your address"],
+    "form": {
+      "nameLabel": "Your name",
+      "namePlaceholder": "e.g. Nodira",
+      "nameError": "Please enter your name.",
+      "phoneLabel": "Phone number",
+      "phoneError": "Enter the full number: +998 and 9 digits.",
+      "regionLabel": "Region",
+      "regionPlaceholder": "Select",
+      "regionError": "Please select a region.",
+      "districtLabel": "District",
+      "districtPlaceholder": "e.g. Qo'rg'ontepa",
+      "districtError": "Please enter your district.",
+      "submit": "Submit request",
+      "note": "Your details are used only to issue the card.",
+      "successTitle": "Your request has been received",
+      "successText": "We'll call this number within 1 business day and issue your card.",
+      "regions": ["Andijan Region", "Bukhara Region", "Fergana Region", "Jizzakh Region", "Namangan Region", "Navoiy Region", "Qashqadaryo Region", "Republic of Karakalpakstan", "Samarkand Region", "Sirdaryo Region", "Surkhandarya Region", "Tashkent Region", "Tashkent City", "Khorezm Region"]
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Frequently asked questions",
+    "items": [
+      {"q": "I don't have a card, what should I do?", "a": "Fill in the form above — we'll call you back ourselves. Opening a card is free."},
+      {"q": "I need cash. What's the benefit of a card?", "a": "You can withdraw the money from an ATM or pay with it directly in a store. The difference is the money is already yours — no need to wait in a branch queue."},
+      {"q": "What's the exchange rate? Is it different from getting cash?", "a": "The amount and rate are shown on screen before you tap \"Accept\". You see everything first and decide — if you don't agree, you simply don't accept it."},
+      {"q": "Is this safe?", "a": "The money arrives on your own card through the bank's app. Only you can log into the app — with your password and an SMS code. Never share your SMS code with anyone; the bank will never ask for it either."},
+      {"q": "Is there a fee?", "a": "You are not charged any fee for accepting the transfer in the app. The transfer fee is paid by the sender."},
+      {"q": "When does the money arrive?", "a": "As soon as the sender sends the transfer, it appears in the app. If you accept it, the money is on your card within 1 minute — even at night or on a day off."},
+      {"q": "Can I still collect it at a branch?", "a": "Yes, the old way still works: bring your passport to a branch and get cash. With the app, you don't need to go anywhere — the choice is yours."}
+    ]
   }
 }

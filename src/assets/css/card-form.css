@@ -1,0 +1,140 @@
+/*
+  Секция «Karta ochish»: текст+преимущества слева, форма заявки справа.
+  Форма не отправляет данные никуда — см. src/assets/js/main.js.
+*/
+
+.card-cta__grid {
+  display: grid;
+  gap: 40px;
+}
+.card-cta__lead {
+  margin-top: 16px;
+  max-width: 34ch;
+  font-size: 18px;
+  color: var(--muted);
+}
+.card-cta__pts {
+  margin-top: 24px;
+  display: grid;
+  gap: 10px;
+}
+.card-cta__pts li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+.card-cta__pts .icon-check {
+  width: 19px;
+  height: 19px;
+  flex: none;
+  color: var(--green-600);
+}
+
+/* --- Форма ---------------------------------------------------------- */
+.form {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r-l);
+  padding: 26px 22px;
+}
+.field + .field {
+  margin-top: 16px;
+}
+.field label {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 700;
+  margin-bottom: 7px;
+  color: var(--ink);
+}
+.field input,
+.field select {
+  width: 100%;
+  min-height: var(--tap);
+  padding: 13px 15px;
+  background: #fff;
+  color: var(--ink);
+  border: 2px solid var(--line);
+  border-radius: var(--r-s);
+  font: inherit;
+  font-size: 17px;
+  transition: border-color 0.16s ease;
+}
+.field input::placeholder {
+  color: var(--muted);
+}
+.field input:focus,
+.field select:focus {
+  border-color: var(--green);
+  outline: none;
+}
+.field input[aria-invalid="true"],
+.field select[aria-invalid="true"] {
+  border-color: #c0392b;
+}
+.field__err {
+  display: none;
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #b4291a;
+}
+.field__err.is-visible {
+  display: block;
+}
+.form__note {
+  margin-top: 16px;
+  font-size: 14.5px;
+  color: var(--muted);
+}
+.form .btn {
+  margin-top: 22px;
+}
+
+/* --- Состояние "успешно отправлено" --------------------------------- */
+.form-done {
+  display: none;
+  margin-top: 0;
+  background: var(--ink);
+  color: #fff;
+  border-radius: var(--r-l);
+  padding: 30px 26px;
+}
+.form-done.is-visible {
+  display: block;
+}
+.form-done h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.form-done p {
+  color: var(--on-dark);
+}
+.form-done__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 16px;
+  border-radius: var(--r-pill);
+  background: rgba(0, 205, 105, 0.16);
+}
+.form-done__icon .icon-check {
+  width: 28px;
+  height: 28px;
+  color: var(--green);
+}
+
+@media (min-width: 960px) {
+  .card-cta__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .form {
+    padding: 34px 32px;
+  }
+}

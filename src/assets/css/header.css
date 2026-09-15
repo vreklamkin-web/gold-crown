@@ -98,10 +98,21 @@ ul {
   border-color: #fff;
   transform: translateY(-2px);
 }
+.btn--dark {
+  background: var(--ink);
+  color: #fff;
+}
+.btn--dark:hover {
+  background: var(--body);
+  transform: translateY(-2px);
+}
 .btn--sm {
   min-height: 44px;
   padding: 11px 18px;
   font-size: 15px;
+}
+.btn--block {
+  width: 100%;
 }
 
 .icon-arrow {

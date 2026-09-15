@@ -1,0 +1,61 @@
+{#
+  Секция «Karta ochish» (id="karta") — 2 колонки: текст+преимущества
+  слева, форма заявки справа. НЕТ БЭКЕНДА: submit формы перехватывается
+  в src/assets/js/main.js, данные никуда не отправляются — только
+  клиентская валидация и переключение на статичный блок "успешно".
+  Своя шапка (не section-head.njk — тут другая раскладка, не по центру).
+#}
+{% set t = uz if lang == "uz" else (ru if lang == "ru" else en) %}
+
+<section class="section card-cta" id="karta">
+  <div class="wrap card-cta__grid">
+    <div>
+      <span class="eyebrow eyebrow--soft">{{ t.card.eyebrow }}</span>
+      <h2>{{ t.card.title }}</h2>
+      <p class="card-cta__lead">{{ t.card.lead }}</p>
+      <ul class="card-cta__pts">
+        {% for point in t.card.points %}
+        <li>{% include "partials/icon-check.njk" %}{{ point }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="card-cta__form-wrap">
+      <form class="form" id="cardForm" novalidate>
+        <div class="field">
+          <label for="fName">{{ t.card.form.nameLabel }}</label>
+          <input type="text" id="fName" name="name" placeholder="{{ t.card.form.namePlaceholder }}" autocomplete="given-name" required />
+          <p class="field__err" id="eName">{{ t.card.form.nameError }}</p>
+        </div>
+        <div class="field">
+          <label for="fPhone">{{ t.card.form.phoneLabel }}</label>
+          <input type="tel" id="fPhone" name="phone" value="+998 " inputmode="numeric" autocomplete="tel" required />
+          <p class="field__err" id="ePhone">{{ t.card.form.phoneError }}</p>
+        </div>
+        <div class="field">
+          <label for="fRegion">{{ t.card.form.regionLabel }}</label>
+          <select id="fRegion" name="region" required>
+            <option value="">{{ t.card.form.regionPlaceholder }}</option>
+            {% for region in t.card.form.regions %}
+            <option>{{ region }}</option>
+            {% endfor %}
+          </select>
+          <p class="field__err" id="eRegion">{{ t.card.form.regionError }}</p>
+        </div>
+        <div class="field">
+          <label for="fDistrict">{{ t.card.form.districtLabel }}</label>
+          <input type="text" id="fDistrict" name="district" placeholder="{{ t.card.form.districtPlaceholder }}" required />
+          <p class="field__err" id="eDistrict">{{ t.card.form.districtError }}</p>
+        </div>
+        <button class="btn btn--dark btn--block" type="submit">{{ t.card.form.submit }}</button>
+        <p class="form__note">{{ t.card.form.note }}</p>
+      </form>
+
+      <div class="form-done" id="formDone" role="status" aria-live="polite" tabindex="-1">
+        <span class="form-done__icon">{% include "partials/icon-check.njk" %}</span>
+        <h3>{{ t.card.form.successTitle }}</h3>
+        <p>{{ t.card.form.successText }}</p>
+      </div>
+    </div>
+  </div>
+</section>
