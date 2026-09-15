@@ -6,12 +6,9 @@
   {% include "partials/hero.njk" %}; переводы берёт из глобальных
   данных uz/ru/en (src/_data) по текущему lang.
 #}
-{% from "partials/ornament.njk" import ornament %}
 {% set t = uz if lang == "uz" else (ru if lang == "ru" else en) %}
 
 <section class="hero">
-  {{ ornament(position="top-right", variant="on-light") }}
-
   <div class="wrap hero__grid">
     <div>
       <span class="eyebrow eyebrow--soft">{{ t.hero.eyebrow }}</span>

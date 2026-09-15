@@ -1,12 +1,12 @@
 /*
-  Футер: светлый минималистичный блок (по мотивам реального agrobank.uz),
-  4 колонки на десктопе → столбик на мобиле, иконки соцсетей, legal-текст.
-  Переиспользует токены из tokens.css — новых размеров/радиусов не вводит.
+  Футер: зелёный акцентный блок (--green), тот же паттерн, что и trust
+  bar — не противоречит светлой теме сайта в целом. Текст --ink (тёмный),
+  как в trust bar, для консистентности. 4 колонки на десктопе → столбик
+  на мобиле, иконки соцсетей, legal-текст.
 */
 
 .footer {
-  background: var(--soft);
-  border-top: 1px solid var(--line);
+  background: var(--green);
   padding-block: 44px 28px;
 }
 
@@ -21,7 +21,8 @@
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--ink);
+  opacity: 0.72;
 }
 
 .footer__logo {
@@ -32,17 +33,19 @@
   margin-top: 14px;
   max-width: 32ch;
   font-size: 15px;
-  color: var(--body);
+  color: var(--ink);
 }
 .footer__slogan {
   margin-top: 10px;
   font-size: 16px;
   font-weight: 700;
-  color: var(--green-600);
+  color: var(--ink);
 }
 
 .footer__tel {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-size: 24px;
   font-weight: 800;
   letter-spacing: -0.01em;
@@ -50,15 +53,25 @@
   text-decoration: none;
 }
 .footer__tel:hover {
-  color: var(--green-600);
+  text-decoration: underline;
+}
+.footer__tel-icon {
+  width: 20px;
+  height: 20px;
+  flex: none;
 }
 .footer__hint {
   margin-top: 8px;
   font-size: 14px;
-  color: var(--muted);
+  color: var(--ink);
+  opacity: 0.72;
 }
 
-/* --- Бейджи App Store / Google Play: тёмные пилюли, белая иконка+текст --- */
+/* --- Бейджи App Store / Google Play: тёмные пилюли, белая иконка+текст --
+   Иконки визуально сбалансированы по "оптическому весу": у символа
+   Apple заливка компактнее внутри своего viewBox, чем у треугольника
+   Google Play, поэтому у Apple чуть больше рендер-размер (не идентичный
+   viewBox, но одинаковая видимая величина символа). */
 .stores {
   display: flex;
   flex-wrap: wrap;
@@ -68,7 +81,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 15px;
+  height: 40px;
+  padding: 0 15px;
   background: var(--ink);
   border-radius: var(--r-s);
   color: #fff;
@@ -77,12 +91,18 @@
   text-decoration: none;
 }
 .store:hover {
-  background: var(--green-600);
+  background: var(--body);
 }
-.store svg {
-  width: 18px;
-  height: 18px;
+.store__icon {
   flex: none;
+}
+.store__icon--apple {
+  width: 20px;
+  height: 20px;
+}
+.store__icon--google {
+  width: 17px;
+  height: 17px;
 }
 
 .footer__link-strong {
@@ -90,10 +110,7 @@
   margin-top: 16px;
   font-size: 15px;
   font-weight: 700;
-  color: var(--green-600);
-  text-decoration: none;
-}
-.footer__link-strong:hover {
+  color: var(--ink);
   text-decoration: underline;
 }
 
@@ -102,21 +119,22 @@
   gap: 10px;
 }
 .footer__nav a {
-  color: var(--body);
+  color: var(--ink);
   font-size: 15px;
   text-decoration: none;
 }
 .footer__nav a:hover {
-  color: var(--green-600);
+  text-decoration: underline;
 }
 
-/* --- Иконки соцсетей: простые круглые, обводкой --- */
+/* --- Иконки соцсетей: простые круглые, обводкой, --ink (не серый —
+   серый на зелёном фоне терял бы контраст) --- */
 .footer__social {
   display: flex;
   gap: 10px;
   margin-top: 36px;
   padding-top: 28px;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(10, 31, 20, 0.16);
 }
 .social {
   display: inline-flex;
@@ -124,13 +142,13 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--ink);
   border-radius: var(--r-pill);
-  color: var(--body);
+  color: var(--ink);
 }
 .social:hover {
-  color: var(--green-600);
-  border-color: var(--green-600);
+  background: var(--ink);
+  color: var(--green);
 }
 .social svg {
   width: 18px;
@@ -141,7 +159,8 @@
   margin-top: 24px;
   font-size: 12.5px;
   line-height: 1.6;
-  color: var(--muted);
+  color: var(--ink);
+  opacity: 0.72;
 }
 
 @media (min-width: 640px) {

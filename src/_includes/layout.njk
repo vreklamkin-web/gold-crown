@@ -44,11 +44,20 @@
         </nav>
 
         <div class="header__side">
-          <div class="lang" role="group" aria-label="{{ t.header.langLabel }}">
-            <a class="lang__btn" href="/" aria-pressed="{{ 'true' if lang == 'uz' else 'false' }}">UZ</a>
-            <a class="lang__btn" href="/ru/" aria-pressed="{{ 'true' if lang == 'ru' else 'false' }}">RU</a>
-            <a class="lang__btn" href="/en/" aria-pressed="{{ 'true' if lang == 'en' else 'false' }}">EN</a>
-          </div>
+          <!-- Переключатель языка: <details>/<summary> без JS — раскрывается
+               нативно, закрывать вручную не нужно (клик по ссылке уводит на
+               другую страницу). Список показывает только 2 ОСТАЛЬНЫХ языка. -->
+          <details class="lang">
+            <summary class="lang__current" aria-label="{{ t.header.langLabel }}">
+              {{ "UZ" if lang == "uz" else ("RU" if lang == "ru" else "EN") }}
+              <svg class="lang__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <ul class="lang__list">
+              {% if lang != "uz" %}<li><a href="/">UZ</a></li>{% endif %}
+              {% if lang != "ru" %}<li><a href="/ru/">RU</a></li>{% endif %}
+              {% if lang != "en" %}<li><a href="/en/">EN</a></li>{% endif %}
+            </ul>
+          </details>
           <a class="btn btn--primary btn--sm" href="#yuklab-olish">{{ t.header.cta }}{% include "partials/icon-arrow.njk" %}</a>
         </div>
       </div>

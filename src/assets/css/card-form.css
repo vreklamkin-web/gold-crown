@@ -10,7 +10,7 @@
 .card-cta__lead {
   margin-top: 16px;
   max-width: 34ch;
-  font-size: 18px;
+  font-size: clamp(16px, 3.4vw, 18px);
   color: var(--muted);
 }
 .card-cta__pts {

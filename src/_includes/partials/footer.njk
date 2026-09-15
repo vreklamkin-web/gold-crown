@@ -1,8 +1,8 @@
 {#
-  Футер лендинга — минималистичный, светлый (по мотивам реального
-  agrobank.uz), а не тяжёлый тёмный из первого референса info.html.
-  Подключается из layout.njk, переводы берёт из t.footer (t уже задан
-  в layout.njk по текущему lang).
+  Футер лендинга — минималистичный, на зелёном фоне (--green), тот же
+  паттерн "зелёный акцентный блок", что и trust bar. Не тяжёлый тёмный
+  из первого референса info.html. Подключается из layout.njk, переводы
+  берёт из t.footer (t уже задан в layout.njk по текущему lang).
 #}
 <div class="wrap footer__grid">
   <div class="footer__col footer__col--brand">
@@ -13,15 +13,18 @@
 
   <div class="footer__col">
     <h3>{{ t.footer.callCenterLabel }}</h3>
-    <a class="footer__tel" href="tel:{{ t.footer.callCenterPhone | replace(' ', '') | replace('-', '') }}">{{ t.footer.callCenterPhone }}</a>
+    <a class="footer__tel" href="tel:{{ t.footer.callCenterPhone | replace(' ', '') | replace('-', '') }}">
+      <svg class="footer__tel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 10.8c1.4 2.7 3.6 4.9 6.3 6.3l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1v3.1c0 .6-.4 1-1 1C11.6 20.5 3.5 12.4 3.5 2.5c0-.6.4-1 1-1h3.1c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1L6.6 10.8Z"/></svg>
+      <span>{{ t.footer.callCenterPhone }}</span>
+    </a>
     <p class="footer__hint">{{ t.footer.callCenterHours }}</p>
   </div>
 
   <div class="footer__col">
     <h3>{{ t.footer.appLabel }}</h3>
     <div class="stores">
-      <a class="store" href="#" data-store="appstore"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.7c0-2 1.6-3 1.7-3-.9-1.4-2.4-1.5-2.9-1.6-1.2-.1-2.4.7-3 .7-.6 0-1.6-.7-2.6-.7-1.3 0-2.6.8-3.3 2-1.4 2.4-.4 6 1 8 .7 1 1.5 2.1 2.5 2 1-.1 1.4-.6 2.6-.6s1.5.6 2.6.6 1.7-1 2.4-2c.7-1.1 1-2.2 1-2.3-.1 0-2-.8-2-3.1ZM14.5 6c.5-.7.9-1.6.8-2.5-.8 0-1.8.5-2.4 1.2-.5.6-1 1.6-.8 2.5.9.1 1.8-.4 2.4-1.2Z"/></svg>App Store</a>
-      <a class="store" href="#" data-store="googleplay"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.3c-.3.3-.5.8-.5 1.4v16.6c0 .6.2 1.1.5 1.4l.1.1 9.3-9.3v-.2L3.6 2.3Zm12.5 6.1L13.5 11 4.6 2.1l11.5 6.3Zm2.9 1.6c.7.4 1.1.9 1.1 1.5s-.4 1.1-1.1 1.5l-2.3 1.3-2.8-2.8 2.8-2.8 2.3 1.3ZM4.6 21.9l8.9-8.9 2.6 2.6L4.6 21.9Z"/></svg>Google Play</a>
+      <a class="store" href="#" data-store="appstore"><svg class="store__icon store__icon--apple" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.7c0-2 1.6-3 1.7-3-.9-1.4-2.4-1.5-2.9-1.6-1.2-.1-2.4.7-3 .7-.6 0-1.6-.7-2.6-.7-1.3 0-2.6.8-3.3 2-1.4 2.4-.4 6 1 8 .7 1 1.5 2.1 2.5 2 1-.1 1.4-.6 2.6-.6s1.5.6 2.6.6 1.7-1 2.4-2c.7-1.1 1-2.2 1-2.3-.1 0-2-.8-2-3.1ZM14.5 6c.5-.7.9-1.6.8-2.5-.8 0-1.8.5-2.4 1.2-.5.6-1 1.6-.8 2.5.9.1 1.8-.4 2.4-1.2Z"/></svg>App Store</a>
+      <a class="store" href="#" data-store="googleplay"><svg class="store__icon store__icon--google" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.3c-.3.3-.5.8-.5 1.4v16.6c0 .6.2 1.1.5 1.4l.1.1 9.3-9.3v-.2L3.6 2.3Zm12.5 6.1L13.5 11 4.6 2.1l11.5 6.3Zm2.9 1.6c.7.4 1.1.9 1.1 1.5s-.4 1.1-1.1 1.5l-2.3 1.3-2.8-2.8 2.8-2.8 2.3 1.3ZM4.6 21.9l8.9-8.9 2.6 2.6L4.6 21.9Z"/></svg>Google Play</a>
     </div>
     <a class="footer__link-strong" href="#karta">{{ t.footer.cardApplyLink }}</a>
   </div>
@@ -37,10 +40,12 @@
   </div>
 </div>
 
+<!-- Единый набор иконок соцсетей: все контурные (stroke-only, без залитых
+     подформ), одинаковая толщина обводки (1.8) и диаметр круга (.social). -->
 <div class="wrap footer__social">
-  <a class="social" href="#" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 4-9 9"/><path d="M21 4 14.5 20l-3.2-6.3L5 10.5 21 4Z"/></svg></a>
-  <a class="social" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.7" fill="currentColor" stroke="none"/></svg></a>
-  <a class="social" href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.5 9.3v5.4l4.8-2.7-4.8-2.7Z" fill="currentColor" stroke="none"/></svg></a>
+  <a class="social" href="#" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 4-9 9"/><path d="M21 4 14.5 20l-3.2-6.3L5 10.5 21 4Z"/></svg></a>
+  <a class="social" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+  <a class="social" href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.5 9.3v5.4l4.8-2.7-4.8-2.7Z"/></svg></a>
 </div>
 
 <div class="wrap footer__legal">

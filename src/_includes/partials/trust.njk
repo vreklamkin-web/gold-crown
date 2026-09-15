@@ -1,16 +1,33 @@
 {#
   Узкая полоса доверия сразу под hero — единственное место, где фон
-  полностью залит --green (не белый и не тёмный). 4 коротких факта.
+  полностью залит --green (не белый и не тёмным). 4 коротких факта,
+  каждый с маленькой иконкой (переиспользованы из hero .facts — те же
+  часы/24-7/без комиссии; 4-й пункт "0 навбат/худжат" использует
+  общий icon-cross.njk как знак "нет/отсутствует").
 #}
 {% set t = uz if lang == "uz" else (ru if lang == "ru" else en) %}
 
 <div class="trust">
   <div class="wrap trust__grid">
-    {% for item in t.trust.items %}
     <div class="trust__item">
-      <b>{{ item.num }}</b>
-      <span>{{ item.label }}</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <b>{{ t.trust.items[0].num }}</b>
+      <span>{{ t.trust.items[0].label }}</span>
     </div>
-    {% endfor %}
+    <div class="trust__item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3a9 9 0 1 1-8.5 6"/><path d="M3 4v5h5"/></svg>
+      <b>{{ t.trust.items[1].num }}</b>
+      <span>{{ t.trust.items[1].label }}</span>
+    </div>
+    <div class="trust__item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 5 5 19"/><circle cx="7.5" cy="7.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg>
+      <b>{{ t.trust.items[2].num }}</b>
+      <span>{{ t.trust.items[2].label }}</span>
+    </div>
+    <div class="trust__item">
+      {% include "partials/icon-cross.njk" %}
+      <b>{{ t.trust.items[3].num }}</b>
+      <span>{{ t.trust.items[3].label }}</span>
+    </div>
   </div>
 </div>

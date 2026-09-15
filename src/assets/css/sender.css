@@ -1,12 +1,9 @@
 /*
   Секция «Jo'natuvchiga»: светлый блок (--soft), зелёная акцентная рамка
-  (--green), --r-xl скругление, текст тёмный, орнамент в углу (вариант
-  для светлого фона — см. ornament--on-light в hero.css).
+  (--green), --r-xl скругление, текст тёмный.
 */
 
 .sender {
-  position: relative;
-  overflow: hidden;
   background: var(--soft);
   border: 2px solid var(--green);
   color: var(--ink);
@@ -15,13 +12,13 @@
 }
 .sender h2 {
   margin-top: 0;
-  font-size: clamp(26px, 5.6vw, 38px);
+  font-size: clamp(27px, 5.4vw, 40px);
   max-width: 20ch;
 }
 .sender__text {
-  position: relative;
   margin-top: 16px;
   max-width: 46ch;
+  font-size: clamp(16px, 3.4vw, 18px);
   color: var(--muted);
 }
 .sender__slogan {
@@ -38,7 +35,6 @@
 }
 
 .share {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;

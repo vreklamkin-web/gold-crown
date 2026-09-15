@@ -3,20 +3,18 @@
   синим (#3C4BDC) — единственное место вне палитры проекта; сначала
   перекрашивалась в тёмный фон, но по брифу заказчика (сайт белый,
   акцент зелёный) фон теперь светлый (--soft) с зелёной рамкой-акцентом,
-  синего нет и тёмного фона целой секции тоже нет.
+  синего нет и тёмного фона целой секции тоже нет. Декоративный
+  орнамент убран — не читался как часть бренда, только визуальный шум.
   Кнопка "скопировать ссылку" — единственная реально рабочая из трёх
   (копирует текущий URL через navigator.clipboard, см. main.js).
   Telegram/WhatsApp — ссылки-заглушки (TODO ниже), иконки — не логотипы
   брендов, а icon-arrow.njk (переиспользуемая, нейтральная).
 #}
-{% from "partials/ornament.njk" import ornament %}
 {% set t = uz if lang == "uz" else (ru if lang == "ru" else en) %}
 
 <section class="section">
   <div class="wrap">
     <div class="sender">
-      {{ ornament(position="bottom-right", variant="on-light") }}
-
       <span class="eyebrow eyebrow--soft">{{ t.sender.eyebrow }}</span>
       <h2>{{ t.sender.title }}</h2>
       <p class="sender__text">{{ t.sender.text }}</p>

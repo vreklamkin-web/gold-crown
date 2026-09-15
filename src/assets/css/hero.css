@@ -3,15 +3,13 @@
   кнопками, стат-плашками (.fact) и моком экрана приложения. Мокап
   телефона (.phone/.tx/...) — единственное намеренно тёмное место:
   имитирует реальный экран приложения, это маленький контейнер,
-  а не фон секции. Плюс стили переиспользуемого орнамента (.ornament).
+  а не фон секции.
 */
 
 .hero {
-  position: relative;
-  overflow: hidden;
   background: var(--soft);
   color: var(--ink);
-  padding-block: 52px 60px;
+  padding-block: 48px 36px;
 }
 
 .eyebrow {
@@ -21,14 +19,13 @@
   margin-bottom: 14px;
   padding: 7px 14px;
   border-radius: var(--r-pill);
-  font-size: 12.5px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .hero__grid {
-  position: relative;
   display: grid;
   gap: 44px;
 }
@@ -45,7 +42,7 @@
 .hero__lead {
   margin-top: 20px;
   max-width: 30ch;
-  font-size: clamp(17px, 4.2vw, 20px);
+  font-size: clamp(16px, 3.4vw, 18px);
   color: var(--muted);
 }
 .hero__actions {
@@ -178,46 +175,6 @@
   color: var(--on-dark);
 }
 
-/* --- Орнамент (.ornament) — см. partials/ornament.njk ------------------ */
-/* ПРАВКА 3: ромбовидный узор вместо треугольников из старого референса,
-   только в зелёной палитре, в углу секции — не на весь фон. */
-.ornament {
-  position: absolute;
-  width: 220px;
-  height: 220px;
-  pointer-events: none;
-}
-.ornament--top-right {
-  top: -40px;
-  right: -30px;
-}
-.ornament--bottom-right {
-  bottom: -40px;
-  right: -30px;
-}
-.ornament--on-dark rect:nth-child(odd) {
-  fill: var(--green);
-  opacity: 0.5;
-}
-.ornament--on-dark rect:nth-child(even) {
-  fill: var(--green-600);
-  opacity: 0.35;
-}
-.ornament--on-green rect {
-  fill: var(--ink);
-  opacity: 0.12;
-}
-/* Для светлого фона (--page/--soft) — приглушённая зелёная "водяная
-   метка" вместо ярких заливок, рассчитанных на тёмный фон. */
-.ornament--on-light rect:nth-child(odd) {
-  fill: var(--green);
-  opacity: 0.16;
-}
-.ornament--on-light rect:nth-child(even) {
-  fill: var(--green-600);
-  opacity: 0.12;
-}
-
 @media (min-width: 640px) {
   .hero__actions {
     grid-template-columns: auto auto;
@@ -227,7 +184,7 @@
 
 @media (min-width: 960px) {
   .hero {
-    padding-block: 84px 96px;
+    padding-block: 72px 56px;
   }
   .hero__grid {
     grid-template-columns: 1.06fr 0.94fr;
@@ -237,9 +194,5 @@
   .phone {
     width: 312px;
     margin-inline: auto 0;
-  }
-  .ornament {
-    width: 280px;
-    height: 280px;
   }
 }

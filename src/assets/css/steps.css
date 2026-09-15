@@ -62,7 +62,7 @@
   margin-bottom: 18px;
 }
 .step-card h3 {
-  font-size: 19.5px;
+  font-size: 18px;
 }
 .step-card p {
   margin-top: 9px;
@@ -116,7 +116,7 @@
 
 @media (min-width: 960px) {
   :root {
-    --sp: 104px;
+    --sp: 80px;
   }
   .steps {
     grid-template-columns: repeat(3, 1fr);
