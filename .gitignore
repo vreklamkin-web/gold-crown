@@ -1,0 +1,14 @@
+# Зависимости npm — устанавливаются локально командой npm install, в репозиторий не кладём.
+node_modules/
+
+# Лок-файл npm — не требуется задачей на этом шаге, генерируется командой npm install.
+package-lock.json
+
+# Папка со статической сборкой Eleventy (результат npm run build).
+_site/
+
+# Системные файлы macOS.
+.DS_Store
+
+# Логи npm.
+npm-debug.log*

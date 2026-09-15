@@ -1,0 +1,13 @@
+{
+  "name": "gold-crown-landing",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Рекламный лендинг продукта «Zolotaya Korona onlayn» (Agrobank). Статика на Eleventy, чистые CSS/JS.",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

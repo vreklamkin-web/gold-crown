@@ -1,0 +1,24 @@
+<!--
+  Базовый HTML-каркас лендинга.
+  Подключается языковыми страницами (uz.njk / ru.njk / en.njk) через
+  front matter "layout: layout.njk". Содержимое страницы попадает сюда
+  через переменную content (стандартный механизм layout'ов в Eleventy).
+  Пока каркас содержит только doctype/head/meta и подключение css/js —
+  верстка секций (hero, шаги, форма и т.д.) будет добавлена на следующих шагах.
+-->
+<!doctype html>
+<html lang="{{ lang }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title }}</title>
+    <!-- Дизайн-токены (цвета, шрифты) -->
+    <link rel="stylesheet" href="/assets/css/tokens.css" />
+  </head>
+  <body>
+    {{ content | safe }}
+
+    <!-- Основной JS-файл лендинга (пока заглушка) -->
+    <script src="/assets/js/main.js" defer></script>
+  </body>
+</html>
